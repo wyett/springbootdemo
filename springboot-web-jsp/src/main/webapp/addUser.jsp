@@ -22,7 +22,7 @@
     姓名：<input type="text" name="name"><br>
     年龄：<input type="text" name="age"><br>
     <input type="submit" value="添加">
-    <!--  onclick="addUser()"> -->
+<%--    onclick="addUser()">--%>
 </form>
 
 <script  type="text/javascript">

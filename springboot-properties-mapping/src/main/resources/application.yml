@@ -1,0 +1,17 @@
+person:
+  name: zhangsan
+  age: 20
+  salary: 50000
+  isMarriage: false
+  car:
+    carName: benz
+    carBrand: 京88888
+  hobbit:
+    - 篮球
+    - rap
+    - 唱歌
+    - 保健
+  maps:
+    k1: v1
+    k2: v2
+  birthDate: 1991/08/21

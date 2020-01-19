@@ -20,6 +20,9 @@
         <module>springboot-restful-demo</module>
         <module>springboot-startdemo</module>
         <module>springboot-web-jsp</module>
+        <module>springboot-properties-mapping</module>
+        <module>springboot-properties-mapping</module>
+        <module>springboot-servlet-compnent</module>
     </modules>
 
     <parent>
