@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  boot:
+    admin:
+      context-path: /admin
+      ui:
+        # tab标签
+        title: "管理系统"
+        # 网页brand的图标和标题
+        brand: <img src='assets/img/timg.svg'><span>应用监控管理</span>
+  security:
+    user:
+      name: wyett
+      password: 123456

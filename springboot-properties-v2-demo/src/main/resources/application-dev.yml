@@ -1,0 +1,8 @@
+application:
+  name: dev @artifactId@
+  version: dev @version@
+develope:
+  name: dev wyett
+  website: dev wyett.com
+  qq: dev 11111111
+  phone-number: dev 1111111111

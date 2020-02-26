@@ -1,0 +1,3 @@
+2020-02-25 16:44:55,669 [http-nio-8080-exec-2] ERROR [com.wyett.logconfig.controller.HelloController] HelloController.java:23 - log in sayHello() when null
+2020-02-25 16:45:18,995 [http-nio-8080-exec-6] ERROR [com.wyett.logconfig.controller.HelloController] HelloController.java:23 - log in sayHello() when null
+2020-02-25 16:45:33,163 [http-nio-8080-exec-8] ERROR [com.wyett.logconfig.controller.HelloController] HelloController.java:23 - log in sayHello() when wyett

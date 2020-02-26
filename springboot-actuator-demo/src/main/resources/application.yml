@@ -1,0 +1,31 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+# 登录信息
+spring:
+  security:
+    user:
+      name: wyett
+      password: 123456
+      roles: MY_ADMIN
+management:
+  server:
+    port: 8090
+    servlet:
+      context-path: /sys
+  endpoint:
+    health:
+      show-details: always
+    # 通过management.endpoint.shutdown.enabled关闭或打开
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+# 增加info信息
+info:
+  app:
+    name: wyett
+    description: wyett

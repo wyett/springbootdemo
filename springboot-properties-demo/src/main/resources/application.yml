@@ -1,0 +1,25 @@
+#server:
+#  port: 8081
+#
+#Person:
+#  lastName: 张三
+#  age: 21
+#  birth: 2001/12/1
+#  maps:
+#    k1: v1
+#    k2: v2
+#  list: [a,b,c]
+#  dog:
+#    name: 旺财
+#    age: 2
+server:
+  port: 8081
+
+spring:
+  profiles: dev
+---
+
+server:
+  port: 8082
+spring:
+  profiles: prod

@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+spring:
+  security:
+    user:
+      name: wyett
+      password: 123456
+  application:
+    name: 'spring-boot-admin-starter-client'
+  boot:
+    admin:
+      client:
+        url: 'http://localhost:8081/admin'
+        instance:
+          metadata:
+            user.name: ${spring.security.user.name}
+            user.password: ${spring.security.user.password}
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'

@@ -1,0 +1,8 @@
+application:
+  name: prod @artifactId@
+  version: prod @version@
+develope:
+  name: prod wyett
+  website: prod wyett.com
+  qq: prod 11111111
+  phone-number: prod 1111111111
