@@ -8,6 +8,7 @@ spring:
     timeout: 5000
     sentinel:
       master: mymaster
+      #cluster:
       #nodes: xxxxx:26379, ip2:26379, ip3:26379
     lettuce:
       pool:
