@@ -6,6 +6,8 @@ spring:
     database: 0
     password: 123456789
     timeout: 5000
+    #cluster:
+    #  nodes: xxxxx:26379, ip2:26379, ip3:26379
     sentinel:
       master: mymaster
       #nodes: xxxxx:26379, ip2:26379, ip3:26379

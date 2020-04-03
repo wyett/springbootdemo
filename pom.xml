@@ -18,6 +18,8 @@
         <module>springboot-admin-server-demo</module>
         <module>springboot-log-demo</module>
         <module>springboot-log-aop-demo</module>
+        <module>springboot-redis-demo</module>
+        <module>springboot-mongo-demo</module>
     </modules>
 
     <name>springbootdemo</name>

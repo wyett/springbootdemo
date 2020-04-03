@@ -1,0 +1,14 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://wyett_rw:jumpjump@10.19.58.18:27017,10.19.58.19:27017,10.19.58.20:27017/wyett?readPreference=secondaryPreferred
+    # not support for mongodb 3.x
+      #host: 10.19.58.18:27017, 10.19.58.19:27017, 10.19.58.20:27017
+      #username: wyett_rw
+      #password: jumpjump
+      #database: wyett
