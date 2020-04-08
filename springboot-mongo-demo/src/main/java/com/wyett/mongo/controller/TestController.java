@@ -23,10 +23,12 @@ public class TestController {
     @Autowired
     private MongoDbFactory mongoDbFactory;
 
+    // http://localhost:8080/demo/queryByDbname?dbname=wyett
     @RequestMapping("/queryByDbname")
-    public void listCollection(@RequestParam String dbname) {
+    public void listCollection(@RequestParam(value = "dbname") String dbname) {
         MongoCursor<Document> mongoCursor = mongoDbFactory.getDb(dbname).listCollections().cursor();
         while (mongoCursor.hasNext()) {
+            //System.out.println(mongoCursor.next().get("name"));
             System.out.println(mongoCursor.next());
         }
     }
