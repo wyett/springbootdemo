@@ -20,6 +20,8 @@
         <module>springboot-log-aop-demo</module>
         <module>springboot-redis-demo</module>
         <module>springboot-mongo-demo</module>
+        <module>springboot-canal-client-demo</module>
+        <module>springboot-rocketmq-demo</module>
     </modules>
 
     <name>springbootdemo</name>

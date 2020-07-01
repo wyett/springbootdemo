@@ -6,15 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot-redis-demo" />
+        <module name="springboot-helloworld" />
         <module name="springboot-actuator-demo" />
+        <module name="springboot-canal-client-demo" />
+        <module name="springboot-redis-demo" />
+        <module name="springboot-rocketmq-demo" />
         <module name="springboot-restful-demo" />
-        <module name="springboot-properties-demo" />
-        <module name="springboot-admin-client-demo" />
         <module name="springboot-admin-server-demo" />
         <module name="springboot-properties-v2-demo" />
         <module name="springboot-log-demo" />
-        <module name="springboot-helloworld" />
+        <module name="springboot-properties-demo" />
+        <module name="springboot-admin-client-demo" />
         <module name="springboot-log-aop-demo" />
         <module name="springboot-mongo-demo" />
       </profile>
