@@ -11,9 +11,9 @@ import org.springframework.stereotype.Service;
  * @description: TODO
  */
 
-@Slf4j
-@Service
-@RocketMQMessageListener(topic = "rediscluster-instance_info-ddl", consumerGroup = "rediscluster-consumer-group")
+//@Slf4j
+//@Service
+//@RocketMQMessageListener(topic = "rediscluster-instance_info-ddl", consumerGroup = "rediscluster-consumer-group")
 public class RedisClusterConsumer implements RocketMQListener<String> {
 
 
