@@ -22,6 +22,9 @@
         <module>springboot-mongo-demo</module>
         <module>springboot-canal-client-demo</module>
         <module>springboot-rocketmq-demo</module>
+        <module>springboot-web-demo</module>
+        <module>springboot-properties-v3-demo</module>
+        <module>springboot-kafka-demo</module>
     </modules>
 
     <name>springbootdemo</name>

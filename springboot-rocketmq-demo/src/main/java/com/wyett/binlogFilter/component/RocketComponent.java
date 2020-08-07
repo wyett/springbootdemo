@@ -1,6 +1,7 @@
 package com.wyett.binlogFilter.component;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
+@PropertySource(value = {"classpath:application.properties"})
 public class RocketComponent {
 
     @Value("${my.filter.rocketmq.topicName}")
@@ -26,6 +28,5 @@ public class RocketComponent {
 
     @Value("${my.filter.table}")
     private String tableName;
-
 
 }
