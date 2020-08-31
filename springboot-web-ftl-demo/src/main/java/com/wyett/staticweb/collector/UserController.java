@@ -22,6 +22,7 @@ public class UserController {
     @PostMapping("/login")
     public ModelAndView login(User user, HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView();
+
         modelAndView.addObject(user);
         modelAndView.setViewName("redirect:/");
 
@@ -30,7 +31,7 @@ public class UserController {
 
     }
 
-    @GetMapping
+    @GetMapping("/login")
     public ModelAndView login() {
         return new ModelAndView("page/user");
 

@@ -1,5 +1,5 @@
 <!doctype>
-<html>
+<html encoding="en">
 <#include "../common/header.ftl">
 <body>
 <div id="app" style="margin: 20px 20%">
