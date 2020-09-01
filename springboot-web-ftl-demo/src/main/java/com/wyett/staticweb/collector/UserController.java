@@ -33,7 +33,7 @@ public class UserController {
 
     @GetMapping("/login")
     public ModelAndView login() {
-        return new ModelAndView("page/user");
+        return new ModelAndView("page/login");
 
     }
 }
