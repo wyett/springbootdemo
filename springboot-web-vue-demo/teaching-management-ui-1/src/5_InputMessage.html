@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Condition</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+<body>
+<div id="app-5">
+    <p>{{ message }}</p>
+    <button v-on:click="reserveMessage">翻转消息</button>
+</div>
+
+<script>
+    var app5 = new Vue({
+        el: '#app-5',
+        data: {
+            message: "hello vue!"
+        },
+        methods: {
+            reserveMessage: function () {
+                /*this.message = this.message.reverse();*/
+                this.message = this.message.split(' ').reverse().join(' ')
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
