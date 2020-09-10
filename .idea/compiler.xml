@@ -10,8 +10,11 @@
         <module name="springboot-kafka-demo" />
         <module name="springboot-ebean-demo" />
         <module name="springboot-restful-demo" />
+        <module name="springboot-mybatis-generator-demo" />
         <module name="springboot-log-demo" />
         <module name="springboot-admin-client-demo" />
+        <module name="springboot-http-demo" />
+        <module name="springboot-login-demo" />
         <module name="springboot-web-demo" />
         <module name="springboot-actuator-demo" />
         <module name="springboot-web-jsp-demo" />
@@ -30,13 +33,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="springboot-mybatis-generator-demo" target="1.8" />
       <module name="sprintboot-http-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="springboot-mybatis-generator-demo" options="-parameters" />
+      <module name="springboot-mybatis-generator-demo" options="" />
       <module name="springboot-properties-demo" options="-parameters" />
     </option>
   </component>

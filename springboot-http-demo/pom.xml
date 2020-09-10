@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sprintboot-resttemplate-demo</artifactId>
+    <artifactId>springboot-http-demo</artifactId>
 
     <dependencies>
         <dependency>
