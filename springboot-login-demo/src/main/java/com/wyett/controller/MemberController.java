@@ -1,10 +1,13 @@
 package com.wyett.controller;
 
 import com.wyett.common.api.CommonResult;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import com.wyett.common.exception.BusinessException;
+import com.wyett.domain.Register;
+import com.wyett.service.MemberService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 /**
  * @author : wyettLei
@@ -16,9 +19,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/sso")
 public class MemberController {
 
-    @PostMapping("/getOptCode")
-    public CommonResult getOptCode(@RequestParam String telPhone) {
+    @Autowired
+    private MemberService memberService;
 
-        return null;
+    @PostMapping("/getOptCode")
+    public CommonResult getOptCode(@RequestParam String telPhone) throws BusinessException {
+        String optCode = memberService.getOptCode(telPhone);
+        return CommonResult.success(optCode);
+    }
+
+    @PostMapping("/register")
+    public CommonResult register(@Valid @RequestBody Register register) throws BusinessException {
+        int result = memberService.register(register);
+        if(result > 0) {
+            return CommonResult.success(null);
+        }
+
+        return CommonResult.failed();
     }
 }

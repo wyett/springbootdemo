@@ -2,6 +2,7 @@ package com.wyett.service;
 
 import com.wyett.common.api.CommonResult;
 import com.wyett.common.exception.BusinessException;
+import com.wyett.domain.Register;
 
 /**
  * @author : wyettLei
@@ -16,5 +17,12 @@ public interface MemberService {
      * @param telPhone
      * @return
      */
-    public CommonResult getOptCode(String telPhone) throws BusinessException;
+    public String getOptCode(String telPhone) throws BusinessException;
+
+    /**
+     * user register
+     * @param register
+     * @return
+     */
+    public int register(Register register) throws BusinessException;
 }
