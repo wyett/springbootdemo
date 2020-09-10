@@ -6,27 +6,37 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot-properties-v3-demo" />
-        <module name="springboot-canal-client-demo" />
+        <module name="springboot-admin-server-demo" />
+        <module name="springboot-kafka-demo" />
+        <module name="springboot-ebean-demo" />
         <module name="springboot-restful-demo" />
         <module name="springboot-log-demo" />
         <module name="springboot-admin-client-demo" />
-        <module name="springboot-actuator-demo" />
-        <module name="springboot-redis-demo" />
-        <module name="springboot-kafka-demo" />
-        <module name="springboot-properties-v2-demo" />
-        <module name="springboot-helloworld" />
-        <module name="springboot-mongo-demo" />
         <module name="springboot-web-demo" />
+        <module name="springboot-actuator-demo" />
+        <module name="springboot-web-jsp-demo" />
         <module name="springboot-rocketmq-demo" />
-        <module name="springboot-admin-server-demo" />
+        <module name="springboot-redis-demo" />
+        <module name="springboot-properties-v2-demo" />
+        <module name="teaching-management" />
+        <module name="springboot-helloworld" />
+        <module name="springboot-web-ftl-demo" />
+        <module name="springboot-canal-client-demo" />
+        <module name="springboot-mongo-demo" />
+        <module name="springboot-mysql-login-demo" />
         <module name="springboot-log-aop-demo" />
+        <module name="springboot-properties-v3-demo" />
         <module name="springboot-properties-demo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springboot-mybatis-generator-demo" target="1.8" />
+      <module name="sprintboot-http-demo" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springboot-mybatis-generator-demo" options="-parameters" />
       <module name="springboot-properties-demo" options="-parameters" />
     </option>
   </component>

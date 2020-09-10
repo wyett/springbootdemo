@@ -25,6 +25,11 @@
         <module>springboot-web-demo</module>
         <module>springboot-properties-v3-demo</module>
         <module>springboot-kafka-demo</module>
+        <module>springboot-mysql-login-demo</module>
+        <module>springboot-web-ftl-demo</module>
+        <module>springboot-web-jsp-demo</module>
+        <module>springboot-web-vue-demo</module>
+        <module>springboot-ebean-demo</module>
     </modules>
 
     <name>springbootdemo</name>

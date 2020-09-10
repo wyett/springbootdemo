@@ -48,4 +48,33 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <finalName>springboot-web-jsp-demo</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <mainClass>com.wyett.JSPApplication</mainClass>
+                            <!--<mainClass>com.alibaba.otter.canal.admin.CanalAdminApplication</mainClass>-->
+                        </manifest>
+                    </archive>
+                    <excludes>
+                        <exclude>**/*.properties</exclude>
+                        <exclude>**/*.xml</exclude>
+                        <exclude>**/*.yml</exclude>
+                        <exclude>static/**</exclude>
+                        <exclude>public/**</exclude>
+                        <exclude>templates/**</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
 </project>
