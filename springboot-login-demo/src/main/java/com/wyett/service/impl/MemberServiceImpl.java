@@ -78,6 +78,7 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public int register(Register register) throws BusinessException {
 
+        // 1.从缓存中获取验证码
         String optCode = (String)redisTemplate.opsForValue().
                         get(redisKeyPrefixConfig.getPrefix().getOtpCode() + register.getPhone());
 

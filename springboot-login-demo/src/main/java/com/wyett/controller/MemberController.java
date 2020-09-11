@@ -37,4 +37,6 @@ public class MemberController {
 
         return CommonResult.failed();
     }
+
+
 }

@@ -27,7 +27,7 @@ public class Register {
     private String optCode;
 
     @NotBlank(message = "密码不允许为空")
-    @Length(min = 10, max = 20, message = "密码长度必须8-20字符之间")
+    @Length(min = 8, max = 20, message = "密码长度必须8-20字符之间")
     private String password;
 
     public String getPhone() {
