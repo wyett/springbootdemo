@@ -38,5 +38,11 @@ public class MemberController {
         return CommonResult.failed();
     }
 
+    @PostMapping("/login")
+    public CommonResult login(@RequestParam String username, @RequestParam String password) {
+
+        return CommonResult.failed();
+    }
+
 
 }

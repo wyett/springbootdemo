@@ -13,6 +13,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
@@ -41,6 +42,9 @@ public class MemberServiceImpl implements MemberService {
 
     @Autowired
     private RedisKeyPrefixConfig redisKeyPrefixConfig;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public String getOptCode(String telPhone) throws BusinessException {
@@ -92,6 +96,25 @@ public class MemberServiceImpl implements MemberService {
         BeanUtils.copyProperties(register, umsMember);
 
         return umsMemberMapper.insertSelective(umsMember);
+    }
+
+    @Override
+    public UmsMember login(String username, String password) throws BusinessException {
+        UmsMemberExample memberExample = new UmsMemberExample();
+        memberExample.createCriteria().andUsernameEqualTo(username).andStatusEqualTo(1);
+        List<UmsMember> result = umsMemberMapper.selectByExample(memberExample);
+
+        if (CollectionUtils.isEmpty(result)) {
+            throw new BusinessException("用户名或者密码不正确");
+        }
+        if (result.size() > 1) {
+            throw new BusinessException("用户被重复注册，请联系客服");
+        }
+        UmsMember umsMember = result.get(0);
+        if (!passwordEncoder.matches(password, umsMember.getPassword())) {
+            throw new BusinessException("用户密码不正确");
+        }
+        return umsMember;
     }
 }
 
