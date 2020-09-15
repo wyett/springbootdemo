@@ -94,6 +94,7 @@ public class MemberServiceImpl implements MemberService {
         umsMember.setMemberLevelId(4L);
         umsMember.setStatus(1);
         BeanUtils.copyProperties(register, umsMember);
+        umsMember.setPassword(passwordEncoder.encode(register.getPassword()));
 
         return umsMemberMapper.insertSelective(umsMember);
     }

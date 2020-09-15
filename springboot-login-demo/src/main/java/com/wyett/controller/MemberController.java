@@ -3,8 +3,10 @@ package com.wyett.controller;
 import com.wyett.common.api.CommonResult;
 import com.wyett.common.exception.BusinessException;
 import com.wyett.domain.Register;
+import com.wyett.domain.UmsMember;
 import com.wyett.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -17,7 +19,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/sso")
-public class MemberController {
+public class MemberController extends HttpController {
 
     @Autowired
     private MemberService memberService;
@@ -39,8 +41,13 @@ public class MemberController {
     }
 
     @PostMapping("/login")
-    public CommonResult login(@RequestParam String username, @RequestParam String password) {
-
+    public CommonResult login(@RequestParam String username, @RequestParam String password) throws BusinessException {
+        UmsMember umsMember = memberService.login(username, password);
+        if (umsMember != null) {
+            getHttpSession().setAttribute("username", username);
+            getHttpSession().getAttribute("username");
+            return CommonResult.success(username + "登录成功");
+        }
         return CommonResult.failed();
     }
 
