@@ -86,7 +86,7 @@ public class MemberServiceImpl implements MemberService {
         String optCode = (String)redisTemplate.opsForValue().
                         get(redisKeyPrefixConfig.getPrefix().getOtpCode() + register.getPhone());
 
-        if(!StringUtils.isEmpty(optCode) || optCode.equals(register.getOptCode())) {
+        if(StringUtils.isEmpty(optCode) || !optCode.equals(register.getOptCode())) {
             throw new BusinessException("验证码不正确！");
         }
 

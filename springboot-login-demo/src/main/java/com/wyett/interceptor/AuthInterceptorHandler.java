@@ -3,6 +3,7 @@ package com.wyett.interceptor;
 import cn.hutool.core.util.ObjectUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.wyett.common.api.CommonResult;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,10 +16,12 @@ import java.io.IOException;
  * @description: TODO
  */
 
+@Slf4j
 public class AuthInterceptorHandler implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        log.info("进入前置连接器");
         if (!ObjectUtil.isEmpty(request.getSession().getAttribute("member"))) {
             return true;
         }

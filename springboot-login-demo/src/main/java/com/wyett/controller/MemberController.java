@@ -45,7 +45,7 @@ public class MemberController extends HttpController {
         UmsMember umsMember = memberService.login(username, password);
         if (umsMember != null) {
             getHttpSession().setAttribute("username", username);
-            getHttpSession().getAttribute("username");
+            //getHttpSession().getAttribute("username");
             return CommonResult.success(username + "登录成功");
         }
         return CommonResult.failed();
