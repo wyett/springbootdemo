@@ -6,8 +6,10 @@ import com.wyett.domain.Register;
 import com.wyett.domain.UmsMember;
 import com.wyett.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 
@@ -17,7 +19,8 @@ import javax.validation.Valid;
  * @description: TODO
  */
 
-@RestController
+//@RestController
+@Controller
 @RequestMapping("/sso")
 public class MemberController extends HttpController {
 
@@ -49,6 +52,21 @@ public class MemberController extends HttpController {
             return CommonResult.success(username + "登录成功");
         }
         return CommonResult.failed();
+    }
+
+    @GetMapping("/getOptCode")
+    public ModelAndView getOptCode() {
+        return new ModelAndView("page/getOptCode");
+    }
+
+    @GetMapping("/register")
+    public ModelAndView register() {
+        return new ModelAndView("page/register");
+    }
+
+    @GetMapping("/login")
+    public ModelAndView login() {
+        return new ModelAndView("page/login");
     }
 
 

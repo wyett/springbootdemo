@@ -99,6 +99,12 @@
             <version>5.2.0.RELEASE</version>
         </dependency>-->
 
+        <!--web-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
