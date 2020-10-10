@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/springboot-web-vue-demo/teaching-management-ui/teaching-management-ui.iml" filepath="$PROJECT_DIR$/springboot-web-vue-demo/teaching-management-ui/teaching-management-ui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot-web-vue-demo/teaching-management-ui-1/teaching-management-ui-1.iml" filepath="$PROJECT_DIR$/springboot-web-vue-demo/teaching-management-ui-1/teaching-management-ui-1.iml" />
-    </modules>
-  </component>
-</project>

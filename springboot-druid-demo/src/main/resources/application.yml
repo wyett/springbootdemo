@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://10.2.212.33:3307/canal_manager?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      #address: 10.2.212.33:3306
+      #database: canal_manager
+      username: canal
+      password: canal
+      initial-size: 10
+      max-active: 20
+      min-idle: 5
+      connection-init-sqls: set names utf8mb4
+      validation-query: select 1
+      test-while-idle: true
+      time-between-eviction-runs-millis: 30000
+      min-evictable-idle-time-millis: 30000
+      max-evictable-idle-time-millis: 40000
+      removeAbandoned: true
+      removeAbandonedTimeout: 80
+      logAbandoned: true
