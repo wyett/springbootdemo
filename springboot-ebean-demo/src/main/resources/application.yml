@@ -3,4 +3,9 @@ server:
   servlet:
     context-path: /demo
 
-spring.database
+spring:
+  datasource:
+    password:
+    username:
+    url:
+    driver-class-name: com.mysql.cj.jdbc.Driver
