@@ -17,6 +17,7 @@
         <module name="springboot-http-demo" />
         <module name="springboot-login-demo" />
         <module name="springboot-actuator-demo" />
+        <module name="springboot-redis-mysql-one-cache-demo" />
         <module name="springboot-web-ftl-demo" />
         <module name="springboot-admin-client-demo" />
         <module name="springboot-redis-demo" />

@@ -35,6 +35,7 @@
         <module>springboot-http-demo</module>
         <module>springboot-druid-demo</module>
         <module>springboot-login-two-level-cache-demo</module>
+        <module>springboot-redis-mysql-one-cache-demo</module>
     </modules>
 
     <name>springbootdemo</name>
