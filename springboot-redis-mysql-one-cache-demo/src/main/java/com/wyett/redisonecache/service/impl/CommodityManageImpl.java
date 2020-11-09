@@ -1,15 +1,13 @@
 package com.wyett.redisonecache.service.impl;
 
-import com.wyett.redisonecache.config.MybatisConfig;
+import com.wyett.redisonecache.exception.BusinessException;
 import com.wyett.redisonecache.mapper.CommodityMapper;
 import com.wyett.redisonecache.model.Commodity;
 import com.wyett.redisonecache.service.CommodityManage;
 import com.wyett.redisonecache.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 
 /**
  * @author : wyettLei
@@ -32,14 +30,21 @@ public class CommodityManageImpl implements CommodityManage {
      * @return
      */
     @Override
-    public Commodity getCommodityById(long id) {
+    public long getRemainCountById(long id) throws BusinessException {
+        // 1.如果redis中有key，则返回value
+        String keyId = String.valueOf(id);
+        if (redisService.hasKey(keyId)) {
+            return Long.valueOf(redisService.get(keyId));
+        }
+        // 2.如果不存在key,则查mysql并且更新redis，暂不考虑一致性
         Commodity commodity = commodityMapper.selectByPrimaryKey(id);
         if (commodity == null) {
-            return null;
+            throw new BusinessException("没有商品" + id);
         }
-        redisService.set(String.valueOf(id), String.valueOf(commodity.getRemainCount()));
-        return commodity;
+        redisService.set(keyId, String.valueOf(commodity.getRemainCount()));
+        return commodity.getRemainCount();
     }
+
 
     /**
      * increace count by id
@@ -47,15 +52,25 @@ public class CommodityManageImpl implements CommodityManage {
      * @return
      */
     @Override
-    public Integer incrCommodityById(long id, long incr) {
+    public void incrCommodityById(long id, int incr) throws BusinessException {
         // 1.从缓存获取当前count
-        if (redisService.hasKey(String.valueOf(id)))
+        String keyId = String.valueOf(id);
+        if (redisService.hasKey(keyId) && redisService.get(keyId) != null) {
+            redisService.increment(keyId, incr);
+        }
 
-        // 2.如果不存在，则从库中获取当前值; 增加
+        // 2.如果不存在，则从库中获取当前值;
+        Commodity commodity = commodityMapper.selectByPrimaryKey(id);
+        if (commodity == null) {
+            throw new BusinessException("没有商品" + id);
+        }
 
-        // 3.将库中当前值存入缓存
-        return null;
+        // 3.更新库和缓存
+        Integer remainCount = commodity.getRemainCount() + incr;
+        commodity.setRemainCount(remainCount);
+        commodityMapper.updateByPrimaryKey(commodity);
+        redisService.set(keyId, String.valueOf(remainCount));
+
     }
-
 
 }

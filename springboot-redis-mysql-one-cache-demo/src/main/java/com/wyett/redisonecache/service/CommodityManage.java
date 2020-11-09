@@ -1,5 +1,6 @@
 package com.wyett.redisonecache.service;
 
+import com.wyett.redisonecache.exception.BusinessException;
 import com.wyett.redisonecache.model.Commodity;
 
 import java.util.List;
@@ -18,12 +19,12 @@ public interface CommodityManage {
      * @param id
      * @return
      */
-    Commodity getCommodityById(long id);
+    long getRemainCountById(long id) throws Exception;
 
     /**
      * increse count
      * @param id
      * @return
      */
-    Integer incrCommodityById(long id, long incr);
+    void incrCommodityById(long id, int incr) throws BusinessException;
 }
