@@ -9,6 +9,13 @@ package com.wyett.redisonecache.service;
 public interface RedisService {
 
     /**
+     * check if has key
+     * @param key
+     * @return
+     */
+    boolean hasKey(String key);
+
+    /**
      * set
      * @param key
      * @param value

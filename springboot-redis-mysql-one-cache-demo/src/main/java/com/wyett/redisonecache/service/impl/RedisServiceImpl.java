@@ -2,7 +2,7 @@ package com.wyett.redisonecache.service.impl;
 
 import com.wyett.redisonecache.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;
@@ -17,30 +17,39 @@ import java.util.concurrent.TimeUnit;
 public class RedisServiceImpl implements RedisService {
 
     @Autowired
-    private StringRedisTemplate stringRedisTemplate;
+    private RedisTemplate redisTemplate;
+
+    @Override
+    public boolean hasKey(String key) {
+        return redisTemplate.hasKey(key);
+    }
 
     @Override
     public void set(String key, String value) {
-        stringRedisTemplate.opsForValue().set(key, value);
+        redisTemplate.opsForValue().set(key, value);
+    }
+
+    public void set(String key, String value, long timeout, TimeUnit timeUnit) {
+        redisTemplate.opsForValue().set(key, value, timeout, timeUnit);
     }
 
     @Override
     public String get(String key) {
-        return stringRedisTemplate.opsForValue().get(key);
+        return (String) redisTemplate.opsForValue().get(key);
     }
 
     @Override
     public boolean expire(String key, long expireTime) {
-        return stringRedisTemplate.expire(key, expireTime, TimeUnit.SECONDS);
+        return redisTemplate.expire(key, expireTime, TimeUnit.SECONDS);
     }
 
     @Override
     public void remove(String key) {
-        stringRedisTemplate.delete(key);
+        redisTemplate.delete(key);
     }
 
     @Override
     public void increment(String key, long inc) {
-        stringRedisTemplate.opsForValue().increment(key, inc);
+        redisTemplate.opsForValue().increment(key, inc);
     }
 }
