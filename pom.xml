@@ -59,6 +59,7 @@
         <mysql-connector.version>8.0.15</mysql-connector.version>
         <druid.version>1.1.23</druid.version>
         <spring.jdbc.version>5.2.0.RELEASE</spring.jdbc.version>
+        <fastjson.version>1.2.31</fastjson.version>
 <!--        <guava.version>27.0.1-jre</guava.version>-->
 <!--        <user.agent.version>1.20</user.agent.version>-->
     </properties>
@@ -160,7 +161,12 @@
                 <artifactId>spring-jdbc</artifactId>
                 <version>${spring.jdbc.version}</version>
             </dependency>
-
+            <!--fastjson-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
