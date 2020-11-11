@@ -1,8 +1,9 @@
 package com.wyett.loginonecache.service;
 
 import com.wyett.loginonecache.common.exception.BusinessException;
-import com.wyett.loginonecache.dao.User;
 import com.wyett.loginonecache.model.domain.Register;
+import com.wyett.loginonecache.model.domain.TokenInfo;
+import com.wyett.loginonecache.model.domain.UserInfo;
 
 /**
  * @author : wyettLei
@@ -17,15 +18,15 @@ public interface MemberService {
      * @param register
      * @return
      */
-    int register(Register register) throws BusinessException;
+    int registe(Register register) throws BusinessException;
 
 
     /**
      * generate token
-     * @param user
+     * @param userInfo
      * @return
      */
-    String generateToken(User user);
+    TokenInfo generateToken(UserInfo userInfo);
 
 
     /**
@@ -34,7 +35,7 @@ public interface MemberService {
      * @param password
      * @return
      */
-    User login(String username, String password);
+    UserInfo login(String username, String password) throws BusinessException;
 
 
     /**

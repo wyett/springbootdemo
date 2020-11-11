@@ -6,7 +6,6 @@ import com.wyett.domain.Register;
 import com.wyett.domain.UmsMember;
 import com.wyett.domain.UmsMemberExample;
 import com.wyett.mapper.UmsMemberMapper;
-import com.wyett.redisonecache.service.MemberService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
