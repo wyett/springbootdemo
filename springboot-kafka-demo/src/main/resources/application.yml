@@ -4,7 +4,7 @@ server:
 spring:
   kafka:
     #bootstrap-servers: 10.19.58.19:9093,10.19.58.19:9094,10.19.58.19:9095
-    bootstrap-servers: 10.10.19.69:9092,10.10.19.69:9093,10.10.18.240:9092
+    bootstrap-servers: 10.16.17.103:9092,10.16.17.103:9093,10.16.17.107:9092
     producer:
       retries: 3
       batch-size: 16384
@@ -12,7 +12,7 @@ spring:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value‐serializer: org.apache.kafka.common.serialization.StringSerializer
     consumer:
-      group-id: sns_canal_test_cluster_1_consumer
+      group-id: I_vc_videocrawler_textcanalround2_2012111208_consumer
       enable-auto-commit: true
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer

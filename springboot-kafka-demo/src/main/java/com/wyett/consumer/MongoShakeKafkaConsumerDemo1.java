@@ -17,7 +17,7 @@ public class MongoShakeKafkaConsumerDemo1 {
 
 
     //@KafkaListener(topics = "mongoshake_test1_topic", groupId = "mygroup1")
-    @KafkaListener(topics = "sns_hycs_data_op_mysql_sync_test", groupId = "mygroup1")
+    @KafkaListener(topics = "textcanalround2", groupId = "mygroup1")
     public void listen(ConsumerRecord<String, String> record) {
         System.out.println(record.topic() + " - " + record.key() + ":" + record.value());
 
