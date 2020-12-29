@@ -54,10 +54,10 @@ public class MemberController extends HttpController {
             redisService.set(token.toString(), getHttpSession().getId());
             redisService.expire(token.toString(), EXPIRE_TIME, TimeUnit.SECONDS);
 
-            return userInfo;
+            //return userInfo;
         }
 
-        return BaseModel.getInstance();
+        return BaseModel.getInstance("success");
 
     }
 

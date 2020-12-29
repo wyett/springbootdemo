@@ -6,9 +6,10 @@ server:
 spring:
   data:
     mongodb:
-      #uri: mongodb://wyett_rw:jumpjump@192.168.0.1:27017,192.168.0.2:27017,192.168.0
-      #.3:27017/wyett?readPreference=secondaryPreferred
-      uri: mongodb://wyett_rw:jumpjump@192.168.0.1:27018/wyett?readPreference=secondaryPreferred
+      uri: mongodb://wyett_rw:jumpjump@10.16.146.12:10010,10.16.146.12:10011/wyett?readPreference=secondaryPreferred
+      #uri: mongodb://wyett_rw:jumpjump@10.16.146
+      #.12:10010/wyett?readPreference=primaryPreferred&maxPoolSize=64&waitQueueMultiple=16
+      #&connectTimeoutMS=60000&ssl=false&serverSelectionTimeoutMS=5000
     # not support for mongodb 3.x
       #host: 192.168.0.1:27017,192.168.0.2:27017,192.168.0.3:27017
       #username: wyett_rw
