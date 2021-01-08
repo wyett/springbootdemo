@@ -37,6 +37,7 @@
         <module>springboot-login-two-level-cache-demo</module>
         <module>springboot-redis-mysql-one-cache-demo</module>
         <module>springboot-login-redis-demo</module>
+        <module>springboot-mysql-shardingjdbc-demo</module>
     </modules>
 
     <name>springbootdemo</name>
@@ -62,6 +63,9 @@
         <spring.jdbc.version>5.2.0.RELEASE</spring.jdbc.version>
         <fastjson.version>1.2.31</fastjson.version>
         <lombok.version>1.18.12</lombok.version>
+        <mybatis-spring.version>2.1.4</mybatis-spring.version>
+        <sharding.jdbc.version>4.1.1</sharding.jdbc.version>
+        <sharding.jdbc.spring.version>4.1.1</sharding.jdbc.spring.version>
 <!--        <guava.version>27.0.1-jre</guava.version>-->
 <!--        <user.agent.version>1.20</user.agent.version>-->
     </properties>
@@ -173,6 +177,22 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+            <!--sharding-proxy-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>shardingsphere-jdbc-core</artifactId>
+                <version>${sharding.jdbc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+                <version>${sharding.jdbc.spring.version}</version>
             </dependency>
 
         </dependencies>

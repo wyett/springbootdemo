@@ -6,7 +6,8 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://wyett_rw:jumpjump@10.16.146.12:10010,10.16.146.12:10011/wyett?readPreference=secondaryPreferred
+      uri: mongodb://wyett_rw:jumpjump@10.16.17.107:10011/wyett
+      #uri: mongodb://wyett_rw:jumpjump@10.16.146.12:10010,10.16.146.12:10011/wyett?readPreference=secondaryPreferred
       #uri: mongodb://wyett_rw:jumpjump@10.16.146
       #.12:10010/wyett?readPreference=primaryPreferred&maxPoolSize=64&waitQueueMultiple=16
       #&connectTimeoutMS=60000&ssl=false&serverSelectionTimeoutMS=5000
