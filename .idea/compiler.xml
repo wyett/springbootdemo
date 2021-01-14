@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot-properties-v3-demo" />
+        <module name="springboot-admin-server-demo" />
         <module name="springboot-web-jsp-demo" />
-        <module name="springboot-web-demo" />
+        <module name="springboot-redis-mysql-one-cache-demo" />
         <module name="springboot-restful-demo" />
         <module name="springboot-login-two-level-cache-demo" />
         <module name="springboot-mybatis-generator-demo" />
@@ -17,28 +17,30 @@
         <module name="springboot-http-demo" />
         <module name="springboot-login-demo" />
         <module name="springboot-login-redis-demo" />
+        <module name="springboot-web-demo" />
+        <module name="springboot-properties-v3-demo" />
         <module name="springboot-actuator-demo" />
-        <module name="springboot-redis-mysql-one-cache-demo" />
-        <module name="springboot-web-ftl-demo" />
-        <module name="springboot-admin-client-demo" />
-        <module name="springboot-redis-demo" />
-        <module name="springboot-log-aop-demo" />
-        <module name="springboot-properties-v2-demo" />
         <module name="springboot-ebean-demo" />
-        <module name="springboot-helloworld" />
-        <module name="teaching-management" />
-        <module name="springboot-druid-demo" />
+        <module name="springboot-web-ftl-demo" />
         <module name="springboot-canal-client-demo" />
+        <module name="springboot-redis-demo" />
+        <module name="springboot-properties-v2-demo" />
+        <module name="teaching-management" />
+        <module name="springboot-helloworld" />
+        <module name="springboot-mongo-demo" />
+        <module name="springboot-druid-demo" />
+        <module name="springboot-admin-client-demo" />
         <module name="springboot-rocketmq-demo" />
         <module name="springboot-mysql-login-demo" />
-        <module name="springboot-admin-server-demo" />
-        <module name="springboot-mongo-demo" />
+        <module name="springboot-mysql-shardingjdbc-demo" />
+        <module name="springboot-log-aop-demo" />
         <module name="springboot-properties-demo" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springboot-mysql-shardingjdbc-demo" options="&quot;-XDignore.symbol.file=true -Xlint&quot;" />
       <module name="springboot-properties-demo" options="-parameters" />
     </option>
   </component>

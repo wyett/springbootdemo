@@ -11,6 +11,7 @@ spring:
       buffer-memory: 33554432
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value‐serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: all
     consumer:
       group-id: I_vc_videocrawler_textcanalround2_2012111208_consumer
       enable-auto-commit: true
