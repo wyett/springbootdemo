@@ -10,8 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
-public class RedisClusterConsumerApp {
+public class SnsConsumerApp {
     public static void main(String[] args) {
-        SpringApplication.run(RedisClusterConsumerApp.class, args);
+        SpringApplication.run(SnsConsumerApp.class, args);
     }
 }

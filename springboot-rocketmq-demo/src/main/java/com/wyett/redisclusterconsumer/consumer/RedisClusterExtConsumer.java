@@ -1,14 +1,12 @@
 package com.wyett.redisclusterconsumer.consumer;
 
 import com.wyett.redisclusterconsumer.domain.MySQLBinlog;
-import com.wyett.redisclusterconsumer.io.FileWriter;
-import com.wyett.redisclusterconsumer.io.OutputFile;
+import com.wyett.io.FileWriter;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
 import org.apache.rocketmq.spring.core.RocketMQListener;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
 import java.io.IOException;
 
 /**

@@ -1,13 +1,7 @@
-package com.wyett.snstllistconsumer.consumer;
+package com.wyett.commonsample.consumer;
 
-import com.wyett.snstllistconsumer.domain.MySQLBinlog;
-import com.wyett.io.FileWriter;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
+import com.wyett.commonsample.domain.MySQLBinlog;
 import org.apache.rocketmq.spring.core.RocketMQListener;
-import org.springframework.stereotype.Service;
-
-import java.io.IOException;
 
 /**
  * @author : wyettLei
@@ -18,7 +12,7 @@ import java.io.IOException;
 //@Slf4j
 //@Service
 //@RocketMQMessageListener(topic = "sns-tllistrc0-sync-withpos-1", consumerGroup = "rediscluster-consumer-group")
-public class SnsTllistrcConsumer implements RocketMQListener<MySQLBinlog> {
+public class CommonBinlogConsumer implements RocketMQListener<MySQLBinlog> {
 
 //    private OutputFile outputFile = new OutputFile();
 

@@ -1,6 +1,7 @@
-package com.wyett.snstllistconsumer.io;
+package com.wyett.io;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -15,11 +16,12 @@ public class OutputFile {
     private static File file;
 
     static {
-        file = new File("f:/tmp", "sns_tllist_0_binlog.txt");
+        file = new File("f:/tmp", "rediscluster_insert.txt");
         if (!file.exists()) {
             try {
-                if (file.exists())
+                if (file.exists()) {
                     file.createNewFile();
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }

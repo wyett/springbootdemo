@@ -1,4 +1,4 @@
-package com.wyett.snstllistconsumer.io;
+package com.wyett.io;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -13,7 +13,7 @@ import java.nio.channels.FileChannel;
 
 public class FileWriter {
 
-    private static String fileName = "F:/tmp/sns_tllist_0_binlog.txt";
+    private static String fileName = "F:/tmp/rediscluster_insert.txt";
 
     public static void writeWithFileChannel(String msg) throws IOException {
         RandomAccessFile stream = new RandomAccessFile(fileName, "rw");
