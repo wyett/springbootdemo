@@ -15,24 +15,26 @@ import java.io.IOException;
  * @description: TODO
  */
 
+//@RocketMQMessageListener(topic = "rediscluster-instance_info-ddl", consumerGroup = "rediscluster-consumer-group")
 @Slf4j
 @Service
-@RocketMQMessageListener(topic = "rediscluster-instance_info-ddl", consumerGroup = "rediscluster-consumer-group")
+@RocketMQMessageListener(topic = "ugc-videodb69-sql-dump-1", consumerGroup = "videodb69-consumer-group")
 public class RedisClusterExtConsumer implements RocketMQListener<MySQLBinlog> {
 
 //    private OutputFile outputFile = new OutputFile();
 
     @Override
     public void onMessage(MySQLBinlog mySQLBinlog) {
-        if (mySQLBinlog.getType().equals("INSERT")
-                && mySQLBinlog.getDatabase().equals("rediscluster") && mySQLBinlog.getTable().equals("instance_info")
-                && (mySQLBinlog.getSql().contains("10.18.9.41") || mySQLBinlog.getSql().contains("10.18.9.79") )) {
-            System.out.println("SQL信息: " + mySQLBinlog.getSql());
-            try {
-                BinlogWriter.writeWithFileChannel(mySQLBinlog.getSql());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+        System.out.println(mySQLBinlog.toString());
+        //if (mySQLBinlog.getType().equals("UPDATE")
+        //        && mySQLBinlog.getDatabase().equals("rediscluster") && mySQLBinlog.getTable().equals("instance_info")
+        //        && (mySQLBinlog.getSql().contains("10.18.9.41") || mySQLBinlog.getSql().contains("10.18.9.79") )) {
+        //    System.out.println("SQL信息: " + mySQLBinlog.getSql());
+        //    try {
+        //        BinlogWriter.writeWithFileChannel(mySQLBinlog.getSql());
+        //    } catch (IOException e) {
+        //        e.printStackTrace();
+        //    }
+        //}
     }
 }

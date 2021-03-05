@@ -1,4 +1,4 @@
-package com.wyett.consumer;
+package com.wyett.consumer.components;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +13,12 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
-public class MongoShakeKafkaConsumerDemo1 {
+public class CanalCommonComponent {
 
 
     //@KafkaListener(topics = "mongoshake_test1_topic", groupId = "mygroup1")
-    @KafkaListener(topics = "textcanalround2", groupId = "mygroup1")
+    //@KafkaListener(topics = "only-wyett3-prod", groupId = "mygroup1")
+    @KafkaListener(topics = "sns_hycs_mario_mysql_canal_dev", groupId = "mygroup1")
     public void listen(ConsumerRecord<String, String> record) {
         System.out.println(record.topic() + " - " + record.key() + ":" + record.value());
 

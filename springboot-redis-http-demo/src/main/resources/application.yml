@@ -1,0 +1,2 @@
+jedis.connect.url=https://panther.sohurdc.com/api/redis/release?uid=21105
+jedis.connect.passwd=1467dea9e0d446879f0df228e0be7286

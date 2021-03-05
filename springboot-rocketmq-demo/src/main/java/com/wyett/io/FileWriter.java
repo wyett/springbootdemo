@@ -13,7 +13,7 @@ import java.nio.channels.FileChannel;
 
 public class FileWriter {
 
-    private static String fileName = "F:/tmp/rediscluster_insert.txt";
+    private static String fileName = "F:/tmp/videodb6-9.txt";
 
     public static void writeWithFileChannel(String msg) throws IOException {
         RandomAccessFile stream = new RandomAccessFile(fileName, "rw");

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
-@PropertySource(value = {"classpath:application.properties"})
+@PropertySource(value = {"classpath:application.yml"})
 public class RocketComponent {
 
     @Value("${my.filter.rocketmq.topicName}")

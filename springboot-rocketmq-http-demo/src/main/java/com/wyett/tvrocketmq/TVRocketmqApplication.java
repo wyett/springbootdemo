@@ -1,17 +1,17 @@
-package com.wyett.consumer;
+package com.wyett.tvrocketmq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author : wyettLei
- * @date : Created in 2020/7/28 11:36
+ * @date : Created in 2021/2/4 19:35
  * @description: TODO
  */
 
 @SpringBootApplication
-public class MongoShakeKafkaConsumerMain {
+public class TVRocketmqApplication {
     public static void main(String[] args) {
-        SpringApplication.run(MongoShakeKafkaConsumerMain.class, args);
+        SpringApplication.run(TVRocketmqApplication.class, args);
     }
 }
