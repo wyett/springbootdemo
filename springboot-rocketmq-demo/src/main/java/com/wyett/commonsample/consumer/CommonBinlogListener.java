@@ -15,23 +15,26 @@ import java.io.IOException;
  * @description: TODO
  */
 
-//@Slf4j
-//@Service
-//@RocketMQMessageListener(topic = "ugc-videodb69-sql-dump-2", consumerGroup = "videodb69-consumer-group")
+@Slf4j
+@Service
+//@RocketMQMessageListener(topic = "dba-canal-mq-connector-test-dba-test-topic", consumerGroup = "dba-canal-mq" +
+//        "-connector-test-consumer")
+@RocketMQMessageListener(topic = "vip-film-order-binlog-test-topic", consumerGroup = "dba-test-filmorder-comsumer1")
 public class CommonBinlogListener implements RocketMQListener<String> {
 
-    private OutputFile outputFile = new OutputFile();
+    //private OutputFile outputFile = new OutputFile();
 
     @Override
     public void onMessage(String s) {
-        if (s.indexOf("UPDATE") != -1) {
-            System.out.println("收到的消息" + s);
-            try {
-                FileWriter.writeWithFileChannel(s);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+        System.out.println(s);
+        //if (s.indexOf("UPDATE") != -1) {
+        //    System.out.println("收到的消息" + s);
+        //    try {
+        //        FileWriter.writeWithFileChannel(s);
+        //    } catch (IOException e) {
+        //        e.printStackTrace();
+        //    }
+        //}
     }
 
 }

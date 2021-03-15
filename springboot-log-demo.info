@@ -1,23 +1,12 @@
-2020-02-25 16:43:53,984 [main] INFO  [com.wyett.logconfig.SpringBootLogApplication] StartupInfoLogger.java:55 - Starting SpringBootLogApplication on DESKTOP-IRL3BUA with PID 10212 (E:\mycode\java\springbootdemo\springboot-log-demo\target\classes started by wyett in E:\mycode\java\springbootdemo)
-2020-02-25 16:43:53,991 [main] INFO  [com.wyett.logconfig.SpringBootLogApplication] SpringApplication.java:651 - No active profile set, falling back to default profiles: default
-2020-02-25 16:43:55,486 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:92 - Tomcat initialized with port(s): 8080 (http)
-2020-02-25 16:43:55,498 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
-2020-02-25 16:43:55,499 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-02-25 16:43:55,501 [main] INFO  [org.apache.catalina.core.AprLifecycleListener] DirectJDKLog.java:173 - Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2020-02-25 16:43:55,502 [main] INFO  [org.apache.catalina.core.AprLifecycleListener] DirectJDKLog.java:173 - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-02-25 16:43:55,502 [main] INFO  [org.apache.catalina.core.AprLifecycleListener] DirectJDKLog.java:173 - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-02-25 16:43:55,507 [main] INFO  [org.apache.catalina.core.AprLifecycleListener] DirectJDKLog.java:173 - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2020-02-25 16:43:55,607 [main] INFO  [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/demo]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
-2020-02-25 16:43:55,607 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:284 - Root WebApplicationContext: initialization completed in 1523 ms
-2020-02-25 16:43:55,811 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:171 - Initializing ExecutorService 'applicationTaskExecutor'
-2020-02-25 16:43:56,032 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:204 - Tomcat started on port(s): 8080 (http) with context path '/demo'
-2020-02-25 16:43:56,036 [main] INFO  [com.wyett.logconfig.SpringBootLogApplication] StartupInfoLogger.java:61 - Started SpringBootLogApplication in 3.08 seconds (JVM running for 6.295)
-2020-02-25 16:44:55,615 [http-nio-8080-exec-2] INFO  [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/demo]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-02-25 16:44:55,616 [http-nio-8080-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:525 - Initializing Servlet 'dispatcherServlet'
-2020-02-25 16:44:55,623 [http-nio-8080-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:547 - Completed initialization in 7 ms
-2020-02-25 16:44:55,664 [http-nio-8080-exec-2] INFO  [com.wyett.logconfig.controller.HelloController] HelloController.java:21 - log in sayHello() when null
-2020-02-25 16:44:55,667 [http-nio-8080-exec-2] WARN  [com.wyett.logconfig.controller.HelloController] HelloController.java:22 - log in sayHello() when null
-2020-02-25 16:45:18,994 [http-nio-8080-exec-6] INFO  [com.wyett.logconfig.controller.HelloController] HelloController.java:21 - log in sayHello() when null
-2020-02-25 16:45:18,995 [http-nio-8080-exec-6] WARN  [com.wyett.logconfig.controller.HelloController] HelloController.java:22 - log in sayHello() when null
-2020-02-25 16:45:33,162 [http-nio-8080-exec-8] INFO  [com.wyett.logconfig.controller.HelloController] HelloController.java:21 - log in sayHello() when wyett
-2020-02-25 16:45:33,162 [http-nio-8080-exec-8] WARN  [com.wyett.logconfig.controller.HelloController] HelloController.java:22 - log in sayHello() when wyett
+2021-03-10 15:43:55,614 [main] INFO  [com.wyett.commonsample.CommonBinlogConsumerApp] StartupInfoLogger.java:55 - Starting CommonBinlogConsumerApp on MININT-M6OVT88 with PID 8896 (E:\mygit\springbootdemo\springboot-rocketmq-demo\target\classes started by chelei in E:\mygit\springbootdemo)
+2021-03-10 15:43:55,660 [main] INFO  [com.wyett.commonsample.CommonBinlogConsumerApp] SpringApplication.java:651 - No active profile set, falling back to default profiles: default
+2021-03-10 15:43:57,894 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:92 - Tomcat initialized with port(s): 8080 (http)
+2021-03-10 15:43:57,913 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2021-03-10 15:43:57,914 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-03-10 15:43:58,109 [main] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/binlogConsumer]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2021-03-10 15:43:58,114 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:284 - Root WebApplicationContext: initialization completed in 2308 ms
+2021-03-10 15:43:58,494 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-10 15:44:03,435 [main] INFO  [o.a.r.s.support.DefaultRocketMQListenerContainer] DefaultRocketMQListenerContainer.java:285 - running container: DefaultRocketMQListenerContainer{consumerGroup='dba-test-filmorder-comsumer1', nameServer='10.11.197.54:9876;10.11.198.123:9876;10.19.121.128:9876;10.19.122.159:9876', topic='vip-film-order-binlog-test-topic', consumeMode=CONCURRENTLY, selectorType=TAG, selectorExpression='*', messageModel=CLUSTERING}
+2021-03-10 15:44:03,437 [main] INFO  [o.a.r.s.a.ListenerContainerConfiguration] ListenerContainerConfiguration.java:127 - Register the listener to container, listenerBeanName:commonBinlogListener, containerBeanName:org.apache.rocketmq.spring.support.DefaultRocketMQListenerContainer_1
+2021-03-10 15:44:03,505 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:204 - Tomcat started on port(s): 8080 (http) with context path '/binlogConsumer'
+2021-03-10 15:44:03,510 [main] INFO  [com.wyett.commonsample.CommonBinlogConsumerApp] StartupInfoLogger.java:61 - Started CommonBinlogConsumerApp in 8.856 seconds (JVM running for 10.884)

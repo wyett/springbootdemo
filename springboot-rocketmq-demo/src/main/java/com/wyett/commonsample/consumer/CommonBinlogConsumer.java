@@ -19,9 +19,9 @@ import java.util.List;
  * @description: TODO
  */
 
-@Slf4j
-@Service
-@RocketMQMessageListener(topic = "ugc-videodb69-sql-dump-2", consumerGroup = "videodb69-consumer-group-2")
+//@Slf4j
+//@Service
+//@RocketMQMessageListener(topic = "ugc-videodb69-sql-dump-2", consumerGroup = "videodb69-consumer-group-2")
 public class CommonBinlogConsumer implements RocketMQListener<CanalMQFlatMsgEntry> {
 
 
@@ -35,8 +35,7 @@ public class CommonBinlogConsumer implements RocketMQListener<CanalMQFlatMsgEntr
 
     @Override
     public void onMessage(CanalMQFlatMsgEntry canalMQFlatMsgEntry) {
-        log.info(canalMQFlatMsgEntry.toString());
-        //System.out.println(canalMQFlatMsgEntry.toString());
+        //log.info(canalMQFlatMsgEntry.toString());
         if (canalMQFlatMsgEntry.getType().equals("UPDATE") && canalMQFlatMsgEntry.getTable().equals("videoinfo")
                 && canalMQFlatMsgEntry.getEs() >= startTime && canalMQFlatMsgEntry.getEs() <= endTime
                 && containAny(Arrays.asList(canalMQFlatMsgEntry.getSql().replace(",", "").split(" ")),
@@ -47,7 +46,7 @@ public class CommonBinlogConsumer implements RocketMQListener<CanalMQFlatMsgEntr
             try {
                 FileWriter.writeWithFileChannel(canalMQFlatMsgEntry.getSql());
             } catch (IOException e) {
-                log.debug(e.getMessage());
+                //log.debug(e.getMessage());
                 //e.printStackTrace();
             }
         }

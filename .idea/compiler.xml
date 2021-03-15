@@ -9,6 +9,7 @@
         <module name="springboot-kafka-demo" />
         <module name="springboot-properties-demo" />
         <module name="springboot-log-aop-demo" />
+        <module name="springboot-mysql-hikari-demo" />
         <module name="springboot-mysql-login-demo" />
         <module name="springboot-canal-client-demo" />
         <module name="springboot-restful-demo" />
@@ -29,6 +30,7 @@
         <module name="springboot-web-demo" />
         <module name="springboot-mongo-demo" />
         <module name="springboot-mybatis-generator-demo" />
+        <module name="springboot-mysql-demo" />
         <module name="springboot-admin-server-demo" />
         <module name="springboot-log-demo" />
         <module name="springboot-ebean-demo" />

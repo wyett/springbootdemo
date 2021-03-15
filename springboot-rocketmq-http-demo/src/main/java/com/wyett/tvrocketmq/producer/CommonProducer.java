@@ -1,5 +1,8 @@
 package com.wyett.tvrocketmq.producer;
 
+import com.sohu.index.tv.mq.rocketmq.ProducerRocketMQ;
+import com.sohu.tv.mq.rocketmq.Producer;
+import org.apache.rocketmq.client.producer.MQProducer;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,6 +11,8 @@ import org.springframework.stereotype.Component;
  * @description: TODO
  */
 
-@Component
 public class CommonProducer {
+    Producer mqProducer = new ProducerRocketMQ("dba-canal-mq-connector-test-dba-test-topic-producer",
+            "dba-canal-mq-connector-test-dba-test-topic");
+
 }
