@@ -7,18 +7,18 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
-<meta name="author" content="Frank Xu Lei">
+<meta name="author" content="wyett">
 <link rel="icon" href="<%=request.getContextPath()%>/Images/favicon.ico">
-<title>login</title>
+<title>wyett blog</title>
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link href="https://getbootstrap.com/docs/4.0/examples/navbar-top-fixed/navbar-top-fixed.css"
 	rel="stylesheet">
 </head>
 <body>
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 		<a class="navbar-brand"
-			href="<%=request.getContextPath()%>/Home/index.html">login</a>
+			href="<%=request.getContextPath()%>/home/index.html">wyett blog</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarCollapse" aria-controls="navbarCollapse"
 			aria-expanded="false" aria-label="Toggle navigation">
@@ -27,32 +27,24 @@
 		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<ul class="navbar-nav mr-auto">
 				<li id="liHome" class="nav-item"><a class="nav-link"
-					href="<%=request.getContextPath()%>/Home/index">主页 </a></li>
-                <li id="liBlog" class="nav-item"><a class="nav-link"
-					href="<%=request.getContextPath()%>/Blog/index">课程</a></li>
-                <li id="liBlog" class="nav-item"><a class="nav-link"
-					href="<%=request.getContextPath()%>/Blog/index">问答</a></li>
+					href="<%=request.getContextPath()%>/home/index">Home </a></li>
 				<li id="liBlog" class="nav-item"><a class="nav-link"
-					href="<%=request.getContextPath()%>/Blog/index">博客</a></li>
-			    <li id="liBlog" class="nav-item"><a class="nav-link"
-					href="<%=request.getContextPath()%>/Blog/index">内推</a></li>
-			    <li id="liBlog" class="nav-item"><a class="nav-link"
-					href="<%=request.getContextPath()%>/Blog/index">开源</a></li>
-				<li id="liBBS" class="nav-item"><a class="nav-link"
-					href="<%=request.getContextPath()%>/Blog/add">大会</a></li>
+					href="<%=request.getContextPath()%>/blog/index">blog</a></li>
+                <li id="liBlog" class="nav-item"><a class="nav-link"
+					href="<%=request.getContextPath()%>/blog/index">About Me</a></li>
 				<%
 					if (session.getAttribute("UserName") != null) {
 				%>
 				<li id="liName" class="nav-item"><a class="nav-link"
 					href="#"><%=session.getAttribute("UserName")%></a></li>
 				<li id="liName" class="nav-item"><a class="nav-link"
-					href="<%=request.getContextPath()%>/Account/logout">退出</a></li>
+					href="<%=request.getContextPath()%>/account/logout">退出</a></li>
 				<%
 					} else {
 						out.print("<li id=\"liName\" class=\"nav-item\"><a class=\"nav-link\" href=" + request.getContextPath()
-								+ "/Account/login" + ">登录</a></li>");
+								+ "/account/login" + ">登录</a></li>");
 						out.print("<li id=\"liName\" class=\"nav-item\"><a class=\"nav-link\" href=" + request.getContextPath()
-								+ "/Account/register" + ">注册</a></li>");
+								+ "/account/register" + ">注册</a></li>");
 					}
 				%>
 			</ul>
@@ -67,7 +59,7 @@
 				}
 			%>
 			<form class="form-inline my-2 my-lg-0"
-				action="<%=request.getContextPath()%>/News/index.html" method="post">
+				action="<%=request.getContextPath()%>/news/index.html" method="post">
 				<input id="keyword" name="keyword" placeholder="关键字" value=""
 					class="form-control mr-sm-2" type="text" />
 				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜索</button>

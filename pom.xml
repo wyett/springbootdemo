@@ -41,7 +41,8 @@
         <module>springboot-rocketmq-http-demo</module>
         <module>springboot-redis-http-demo</module>
         <module>springboot-mysql-hikari-demo</module>
-        <module>springboot-mysql-demo</module>
+        <module>springboot-mysql-jpa-demo</module>
+        <module>springboot-mongo-login-demo</module>
     </modules>
 
     <name>springbootdemo</name>

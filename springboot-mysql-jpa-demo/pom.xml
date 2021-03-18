@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.wyett</groupId>
-    <artifactId>springboot-mysql-demo</artifactId>
+    <artifactId>springboot-mysql-jpa-demo</artifactId>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -8,7 +8,7 @@
 		<h2
 			style="text-align: center; font-family: Microsoft YaHei;">注册新用户</h2>
 		<div class="form-group">
-			<label for="name">账号</label> 
+			<label for="username">账号</label>
 			<input type="text" class="form-control"
 				id="username" name="username" placeholder="手机号或email"  required />
 		</div>
