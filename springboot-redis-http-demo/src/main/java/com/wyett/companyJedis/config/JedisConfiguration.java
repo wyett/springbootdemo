@@ -1,8 +1,15 @@
 package com.wyett.companyJedis.config;
 
-import org.springframework.beans.factory.annotation.Value;
+import com.sohu.jedis.CustomJedis;
+import com.sohu.jedis.CustomJedisFactory;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
+import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
+
+import java.io.Serializable;
 
 /**
  * @author : wyettLei
@@ -13,10 +20,21 @@ import org.springframework.stereotype.Component;
 @Configuration
 public class JedisConfiguration {
 
-    @Value("${jedis.connection.url}")
-    private String jedisUrl;
+    @Bean
+    public RedisTemplate<String, Serializable> redisTemplate(JedisConnectionFactory connectionFactory) {
+        RedisTemplate<String, Serializable> redisTemplate = new RedisTemplate<>();
+        redisTemplate.setKeySerializer(new StringRedisSerializer());
+        redisTemplate.setValueSerializer(new GenericJackson2JsonRedisSerializer());
+        redisTemplate.setConnectionFactory(connectionFactory);
+        return redisTemplate;
+    }
 
-
-    @Value("${jedis.connection.passwd}")
-    private String jedisPwd;
+    @Bean
+    public RedisTemplate<String, Serializable> cRedisTemplate(CustomJedis customJedis) {
+        RedisTemplate<String, Serializable> redisTemplate = new RedisTemplate<>();
+        redisTemplate.setKeySerializer(new StringRedisSerializer());
+        redisTemplate.setValueSerializer(new GenericJackson2JsonRedisSerializer());
+        redisTemplate.setConnectionFactory(customJedisFactory);
+        return redisTemplate;
+    }
 }

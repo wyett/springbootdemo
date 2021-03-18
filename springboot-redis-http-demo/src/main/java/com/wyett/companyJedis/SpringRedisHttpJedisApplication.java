@@ -1,14 +1,7 @@
 package com.wyett.companyJedis;
 
-import com.sohu.jedis.ApiInfo;
-import com.sohu.jedis.CustomJedis;
-import com.sohu.jedis.CustomJedisPool;
-import com.sohu.jedis.Role;
-import com.wyett.companyJedis.config.JedisConfiguration;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import redis.clients.jedis.JedisPoolConfig;
 
 /**
  * @author : wyettLei
@@ -17,10 +10,10 @@ import redis.clients.jedis.JedisPoolConfig;
  */
 
 @SpringBootApplication
-public class CommonJedis {
+public class SpringRedisHttpJedisApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CommonJedis.class, args);
+        SpringApplication.run(SpringRedisHttpJedisApplication.class, args);
 
         /**
         JedisPoolConfig poolConfig = new JedisPoolConfig();
