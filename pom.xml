@@ -43,6 +43,7 @@
         <module>springboot-mysql-hikari-demo</module>
         <module>springboot-mysql-jpa-demo</module>
         <module>springboot-mongo-login-demo</module>
+        <module>springboot-redis-bloom-filter-demo</module>
     </modules>
 
     <name>springbootdemo</name>
