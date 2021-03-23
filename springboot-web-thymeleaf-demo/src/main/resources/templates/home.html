@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SpringBoot+thymeleaf</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+    <div style="text-align: center;margin:0 auto;width: 1000px; ">
+        <h1>home page</h1>
+        <table width="100%" border="1" cellspacing="1" cellpadding="0">
+            <tr>
+                <td>ID</td>
+                <td>用户名</td>
+                <td>密码</td>
+            </tr>
+            <!--/*@thymesVar id="learnList" type=""*/-->
+            <tr th:each="user: ${userList}">
+                <td th:text="${user.id}">id</td>
+                <td th:text="${user.username}">username</td>
+                <td><a th:href="${user.password}">password</a></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

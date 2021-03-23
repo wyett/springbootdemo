@@ -29,6 +29,7 @@ public class JedisConfiguration {
         return redisTemplate;
     }
 
+    /**
     @Bean
     public RedisTemplate<String, Serializable> cRedisTemplate(CustomJedis customJedis) {
         RedisTemplate<String, Serializable> redisTemplate = new RedisTemplate<>();
@@ -37,4 +38,5 @@ public class JedisConfiguration {
         redisTemplate.setConnectionFactory(customJedisFactory);
         return redisTemplate;
     }
+    */
 }

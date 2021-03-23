@@ -1,24 +1,19 @@
-package com.wyett;
+package com.wyett.spthymeleaf;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * @author : wyettLei
- * @date : Created in 2020/9/1 17:13
- * @description: TODO
- */
-
+//@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @SpringBootApplication
-public class JSPApplication implements CommandLineRunner {
-    public static void main(String[] args) {
-        SpringApplication.run(JSPApplication.class, args);
-    }
+public class SpringbootWebThymeleafDemoApplication implements CommandLineRunner {
 
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootWebThymeleafDemoApplication.class, args);
+    }
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("jsp demo");
+        System.out.println("springboot + thymeleaf");
     }
 }
