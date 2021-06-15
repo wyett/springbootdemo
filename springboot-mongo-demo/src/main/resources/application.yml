@@ -6,7 +6,9 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://wyett_rw:jumpjump@10.16.17.107:10011/wyett
+      #uri: mongodb://wyett_rw:jumpjump@10.18.55.28:10000,10.18.54.64:10000/wyett?readPreference=secondaryPreferred&w=ma
+      #uri: mongodb://wyett_rw:jumpjump@10.16.17.107:10011/wyett
+      uri: mongodb://wyett_rw:jumpjump@10.11.167.11:27017/wyett
       #uri: mongodb://wyett_rw:jumpjump@10.16.146.12:10010,10.16.146.12:10011/wyett?readPreference=secondaryPreferred
       #uri: mongodb://wyett_rw:jumpjump@10.16.146
       #.12:10010/wyett?readPreference=primaryPreferred&maxPoolSize=64&waitQueueMultiple=16
@@ -16,3 +18,4 @@ spring:
       #username: wyett_rw
       #password: jumpjump
       #database: wyett
+

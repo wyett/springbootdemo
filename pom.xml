@@ -254,6 +254,18 @@
                 <artifactId>tomcat-embed-jasper</artifactId>
                 <version>${jasper.version}</version>
             </dependency>
+
+            <!--connection pool-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.1.22</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.0.5</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>

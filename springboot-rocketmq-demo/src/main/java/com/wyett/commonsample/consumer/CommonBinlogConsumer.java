@@ -22,6 +22,7 @@ import java.util.List;
 //@Slf4j
 //@Service
 //@RocketMQMessageListener(topic = "ugc-videodb69-sql-dump-2", consumerGroup = "videodb69-consumer-group-2")
+//@RocketMQMessageListener(topic = "sns_m4m_data_op_mysql_sync_test", consumerGroup = "dba-test-m4m-comsumer1")
 public class CommonBinlogConsumer implements RocketMQListener<CanalMQFlatMsgEntry> {
 
 
