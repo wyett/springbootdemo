@@ -1,5 +1,6 @@
 package com.wyett.redisclusterconsumer.consumer;
 
+import com.wyett.commonsample.domain.CanalMQFlatMsgEntry;
 import com.wyett.redisclusterconsumer.domain.MySQLBinlog;
 import com.wyett.io.FileWriter;
 import lombok.extern.slf4j.Slf4j;
@@ -17,22 +18,28 @@ import java.io.IOException;
 
 @Slf4j
 @Service
-@RocketMQMessageListener(topic = "rediscluster-instance_info-ddl", consumerGroup = "rediscluster-consumer-group")
-public class RedisClusterExtConsumer implements RocketMQListener<MySQLBinlog> {
+@RocketMQMessageListener(topic = "rediscluster-write-all-ddl1", consumerGroup = "rediscluster-consumer-group2")
+public class RedisClusterExtConsumer implements RocketMQListener<CanalMQFlatMsgEntry> {
 
 //    private OutputFile outputFile = new OutputFile();
 
+    String sqlText = "";
+
     @Override
-    public void onMessage(MySQLBinlog mySQLBinlog) {
+    public void onMessage(CanalMQFlatMsgEntry mySQLBinlog) {
         if (mySQLBinlog.getType().equals("INSERT")
-                && mySQLBinlog.getDatabase().equals("rediscluster") && mySQLBinlog.getTable().equals("instance_info")
-                && (mySQLBinlog.getSql().contains("10.18.9.41") || mySQLBinlog.getSql().contains("10.18.9.79") )) {
-            System.out.println("SQL信息: " + mySQLBinlog.getSql());
+                && mySQLBinlog.getDatabase().equals("rediscluster") && mySQLBinlog.getTable().equals("app_reshard")
+                && (mySQLBinlog.getSql().contains("20755")   )
+        ) {
+            sqlText = mySQLBinlog.getSql().replaceAll("[\\n\\t\\r]","").replaceAll("[ ][ ]*"," ");
+            System.out.println("SQL信息: " + sqlText);
             try {
-                FileWriter.writeWithFileChannel(mySQLBinlog.getSql());
+                FileWriter.writeWithFileChannel(sqlText);
             } catch (IOException e) {
-                e.printStackTrace();
+                //log.debug(e.getMessage());
+                //e.printStackTrace();
             }
         }
+        //System.out.println(mySQLBinlog.toString());
     }
 }

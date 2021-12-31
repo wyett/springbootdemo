@@ -3,17 +3,7 @@ server:
 
 spring:
   kafka:
-    #bootstrap-servers: 10.19.58.19:9093,10.19.58.19:9094,10.19.58.19:9095
-    bootstrap-servers: 10.16.17.103:9092,10.16.17.103:9093,10.16.17.107:9092
-    #bootstrap-servers: kfk013223.heracles.sohuno.com:9092,kfk013221.heracles.sohuno.com:9092,pdn096224.heracles
-    #.sohuno.com:9092,pdn096223.heracles.sohuno.com:9092,kfk013225.heracles.sohuno.com:9092,kfk013224.heracles.sohuno
-    #.com:9092,kfk013222.heracles.sohuno.com:9092,kfk013216.heracles.sohuno.com:9092,kfk013215.heracles.sohuno
-    #.com:9092,kfk131132.heracles.sohuno.com:9092,kfk131133.heracles.sohuno.com:9092,kfk131131.heracles.sohuno
-    #.com:9092,kfk013219.heracles.sohuno.com:9092,pdn096227.heracles.sohuno.com:9092,kfk013220.heracles.sohuno
-    #.com:9092,kfk131134.heracles.sohuno.com:9092,kfk013218.heracles.sohuno.com:9092,kfk013217.heracles.sohuno
-    #.com:9092,pdn096229.heracles.sohuno.com:9092,pdn096228.heracles.sohuno.com:9092,pdn096226.heracles.sohuno
-    #.com:9092,pdn096230.heracles.sohuno.com:9092,pdn096225.heracles.sohuno.com:9092,pdn096222.heracles.sohuno
-    #.com:9092,pdn096221.heracles.sohuno.com:9092
+    #bootstrap-servers: 192.168.1.100:9092,192.168.1.101:9093,192.168.1.102:9092
     #producer:
     #  retries: 3
     #  batch-size: 16384
@@ -22,8 +12,8 @@ spring:
     #  value‐serializer: org.apache.kafka.common.serialization.StringSerializer
     #  acks: all
     consumer:
-      group-id: mygroup1
-      enable-auto-commit: true
+      #group-id: wyett-tmp-mygroup5
+      #enable-auto-commit: true
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
     listener:

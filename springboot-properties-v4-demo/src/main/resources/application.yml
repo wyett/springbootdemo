@@ -1,0 +1,15 @@
+server:
+  port: 5001
+
+spring:
+  application:
+    name: canal-alert-web-hook
+
+redis:
+  key:
+    prefix: "alertManager"
+      #otpCode: "alertManager:" #动态校验码前缀
+    expire: 120
+      #otpCode: 120 #动态校验码过期时间
+
+

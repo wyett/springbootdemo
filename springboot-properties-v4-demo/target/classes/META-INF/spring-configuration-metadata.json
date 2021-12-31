@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "redis.key",
+      "type": "com.wyett.config.RedisKeyPrefixConfig",
+      "sourceType": "com.wyett.config.RedisKeyPrefixConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "redis.key.expire",
+      "type": "java.lang.Long",
+      "sourceType": "com.wyett.config.RedisKeyPrefixConfig"
+    },
+    {
+      "name": "redis.key.prefix",
+      "type": "java.lang.String",
+      "sourceType": "com.wyett.config.RedisKeyPrefixConfig"
+    }
+  ],
+  "hints": []
+}
