@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 
 @Slf4j
 @Service
-@RocketMQMessageListener(topic = "sns-tllistrc0-sync-withpos-1", consumerGroup = "rediscluster-consumer-group")
+@RocketMQMessageListener(topic = "my-sync-withpos-1", consumerGroup = "my-consumer-group")
 public class SnsTllistrcListener implements RocketMQListener<String> {
 
 
