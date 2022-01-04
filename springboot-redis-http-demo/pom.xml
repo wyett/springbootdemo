@@ -48,7 +48,7 @@
             <releases>
                 <enabled>true</enabled>
             </releases>
-            <url>http://automat.sohurdc.com:8082/nexus/content/repositories/rdc-redis/</url>
+            <url>http://127.0.0.1:8888/nexus/content/repositories/redis/</url>
         </repository>
     </repositories>
 

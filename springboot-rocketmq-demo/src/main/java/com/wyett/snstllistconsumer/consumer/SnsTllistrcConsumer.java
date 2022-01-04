@@ -17,7 +17,7 @@ import java.io.IOException;
 
 //@Slf4j
 //@Service
-//@RocketMQMessageListener(topic = "sns-tllistrc0-sync-withpos-1", consumerGroup = "rediscluster-consumer-group")
+//@RocketMQMessageListener(topic = "my-sync-withpos-1", consumerGroup = "my-consumer-group")
 public class SnsTllistrcConsumer implements RocketMQListener<MySQLBinlog> {
 
 //    private OutputFile outputFile = new OutputFile();
@@ -25,9 +25,7 @@ public class SnsTllistrcConsumer implements RocketMQListener<MySQLBinlog> {
     @Override
     public void onMessage(MySQLBinlog mySQLBinlog) {
         /*
-        if (mySQLBinlog.getType().equals("INSERT")
-                && mySQLBinlog.getDatabase().equals("rediscluster") && mySQLBinlog.getTable().equals("instance_info")
-                && (mySQLBinlog.getSql().contains("10.18.9.41") || mySQLBinlog.getSql().contains("10.18.9.79") )) {
+        if (mySQLBinlog.getType().equals("INSERT") {
             System.out.println("SQL信息: " + mySQLBinlog.getSql());
             try {
                 FileWriter.writeWithFileChannel(mySQLBinlog.getSql());

@@ -20,9 +20,7 @@
         <module>springboot-log-aop-demo</module>
         <module>springboot-redis-demo</module>
         <module>springboot-mongo-demo</module>
-        <module>springboot-canal-client-demo</module>
         <module>springboot-rocketmq-demo</module>
-        <module>springboot-web-demo</module>
         <module>springboot-properties-v3-demo</module>
         <module>springboot-kafka-demo</module>
         <module>springboot-mysql-login-demo</module>
@@ -34,7 +32,6 @@
         <module>springboot-login-demo</module>
         <module>springboot-http-demo</module>
         <module>springboot-druid-demo</module>
-        <module>springboot-login-two-level-cache-demo</module>
         <module>springboot-redis-mysql-one-cache-demo</module>
         <module>springboot-login-redis-demo</module>
         <module>springboot-mysql-shardingjdbc-demo</module>
@@ -47,7 +44,6 @@
         <module>springboot-web-thymeleaf-demo</module>
         <module>springboot-web-security-demo</module>
         <module>springboot-shardingsphere-demo</module>
-        <module>springboot-mysql-mybatis-demo</module>
         <module>springboot-properties-v4-demo</module>
     </modules>
 
@@ -318,19 +314,5 @@
             </plugins>
         </pluginManagement>
     </build>
-    <repositories>
-        <repository>
-            <id>releases</id>
-            <name>nexus-release</name>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <url>http://automat.sohurdc.com:8082/nexus/content/repositories/rdc-redis/</url>
-        </repository>
-        <repository>
-            <id>sohu.nexus</id>
-            <url>http://index.tv.sohuno.com/nexus/content/groups/public</url>
-        </repository>
-    </repositories>
 
 </project>

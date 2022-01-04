@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/springboot-web-jsp-demo" />
   </component>
@@ -10,16 +9,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/springboot-canal-client-demo/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot-login-two-level-cache-demo/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot-mysql-mybatis-demo/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot-web-demo/pom.xml" />
-      </set>
-    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8.0_261" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

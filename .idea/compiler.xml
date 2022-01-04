@@ -15,10 +15,10 @@
         <module name="springboot-redis-mysql-one-cache-demo" />
         <module name="teaching-management" />
         <module name="springboot-rocketmq-http-demo" />
-        <module name="springboot-redis-demo" />
         <module name="springboot-web-security-demo" />
-        <module name="springboot-mongo-demo" />
         <module name="springboot-mongo-login-demo" />
+        <module name="springboot-mongo-demo" />
+        <module name="springboot-redis-demo" />
         <module name="springboot-web-jsp-demo" />
         <module name="springboot-redis-bloom-filter-demo" />
         <module name="springboot-mysql-jpa-demo" />
@@ -38,16 +38,50 @@
         <module name="springboot-log-aop-demo" />
         <module name="springboot-mybatis-generator-demo" />
         <module name="springboot-helloworld" />
-        <module name="springboot-druid-demo" />
         <module name="springboot-redis-http-demo" />
+        <module name="springboot-druid-demo" />
         <module name="springboot-properties-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="springboot-canal-client-demo" target="1.8" />
-      <module name="springboot-login-two-level-cache-demo" target="1.8" />
-      <module name="springboot-mysql-mybatis-demo" target="1.8" />
-      <module name="springboot-web-demo" target="1.8" />
+      <module name="springboot-actuator-demo" target="1.8" />
+      <module name="springboot-admin-client-demo" target="1.8" />
+      <module name="springboot-admin-server-demo" target="1.8" />
+      <module name="springboot-druid-demo" target="1.8" />
+      <module name="springboot-ebean-demo" target="1.8" />
+      <module name="springboot-helloworld" target="1.8" />
+      <module name="springboot-http-demo" target="1.8" />
+      <module name="springboot-kafka-demo" target="1.8" />
+      <module name="springboot-log-aop-demo" target="1.8" />
+      <module name="springboot-log-demo" target="1.8" />
+      <module name="springboot-login-demo" target="1.8" />
+      <module name="springboot-login-redis-demo" target="1.8" />
+      <module name="springboot-mongo-demo" target="1.8" />
+      <module name="springboot-mongo-login-demo" target="1.8" />
+      <module name="springboot-mybatis-generator-demo" target="1.8" />
+      <module name="springboot-mysql-hikari-demo" target="1.8" />
+      <module name="springboot-mysql-jpa-demo" target="1.8" />
+      <module name="springboot-mysql-login-demo" target="1.8" />
+      <module name="springboot-mysql-shardingjdbc-demo" target="1.8" />
+      <module name="springboot-properties-demo" target="1.8" />
+      <module name="springboot-properties-v2-demo" target="1.8" />
+      <module name="springboot-properties-v3-demo" target="1.8" />
+      <module name="springboot-properties-v4-demo" target="1.8" />
+      <module name="springboot-redis-bloom-filter-demo" target="1.8" />
+      <module name="springboot-redis-demo" target="1.8" />
+      <module name="springboot-redis-http-demo" target="1.8" />
+      <module name="springboot-redis-mysql-one-cache-demo" target="1.8" />
+      <module name="springboot-restful-demo" target="1.8" />
+      <module name="springboot-rocketmq-demo" target="1.8" />
+      <module name="springboot-rocketmq-http-demo" target="1.8" />
+      <module name="springboot-shardingsphere-demo" target="1.8" />
+      <module name="springboot-web-ftl-demo" target="1.8" />
+      <module name="springboot-web-jsp-demo" target="1.8" />
+      <module name="springboot-web-security-demo" target="1.8" />
+      <module name="springboot-web-thymeleaf-demo" target="1.8" />
+      <module name="springboot-web-vue-demo" target="1.8" />
+      <module name="springbootdemo" target="1.8" />
+      <module name="teaching-management" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
